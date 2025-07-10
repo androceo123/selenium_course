@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="2" total="3" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-07-10T12:14:39 GMT-03:00" name="Surefire suite" finished-at="2025-07-10T12:14:44 GMT-03:00" duration-ms="5456">
+    <groups>
+    </groups>
+    <test started-at="2025-07-10T12:14:39 GMT-03:00" name="Surefire test" finished-at="2025-07-10T12:14:44 GMT-03:00" duration-ms="5456">
+      <class name="navigation.NavigationTests">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:navigation.NavigationTests@436a4e4b]" started-at="2025-07-10T12:14:39 GMT-03:00" name="setUp" finished-at="2025-07-10T12:14:43 GMT-03:00" duration-ms="4136" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="resetToHome()[pri:0, instance:navigation.NavigationTests@436a4e4b]" started-at="2025-07-10T12:14:43 GMT-03:00" name="resetToHome" finished-at="2025-07-10T12:14:43 GMT-03:00" duration-ms="225" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- resetToHome -->
+        <test-method signature="testOpenExample1WithCtrlClickAndVerifyStartButton()[pri:0, instance:navigation.NavigationTests@436a4e4b]" started-at="2025-07-10T12:14:43 GMT-03:00" name="testOpenExample1WithCtrlClickAndVerifyStartButton" finished-at="2025-07-10T12:14:44 GMT-03:00" duration-ms="819" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testOpenExample1WithCtrlClickAndVerifyStartButton -->
+        <test-method is-config="true" signature="recordFailure(org.testng.ITestResult)[pri:0, instance:navigation.NavigationTests@436a4e4b]" started-at="2025-07-10T12:14:44 GMT-03:00" name="recordFailure" finished-at="2025-07-10T12:14:44 GMT-03:00" duration-ms="4" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testOpenExample1WithCtrlClickAndVerifyStartButton status=SUCCESS method=NavigationTests.testOpenExample1WithCtrlClickAndVerifyStartButton()[pri:0, instance:navigation.NavigationTests@436a4e4b] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- recordFailure -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:navigation.NavigationTests@436a4e4b]" started-at="2025-07-10T12:14:44 GMT-03:00" name="tearDown" finished-at="2025-07-10T12:14:44 GMT-03:00" duration-ms="220" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- navigation.NavigationTests -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>
