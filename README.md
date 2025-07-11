@@ -4,98 +4,91 @@ This repository contains automated UI tests built while following the [Selenium 
 
 ## Table of Contents
 
-- [Prerequisites](#prerequisites)  
-- [Installation](#installation)  
-- [Running the Tests](#running-the-tests)   
-- [What I Learned](#what-i-learned)   
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Running the Tests](#running-the-tests)
+- [What I Learned](#what-i-learned)
 
 ## Prerequisites
 
-- **Java 10+** installed  
-- **Maven** installed  
-- **Google Chrome** browser installed  
-- **ChromeDriver** executable downloaded (matching your Chrome version)  
-- Place the `chromedriver` binary in the `resources/` folder  
-- **IDE** of your choice (IntelliJ IDEA recommended)  
+- **Java 10+** installed
+- **Maven** installed
+- **Google Chrome** browser installed
+- **ChromeDriver** executable downloaded (matching your Chrome version)
+- Place the `chromedriver` binary in the `resources/` folder
+- **IDE** of your choice (IntelliJ IDEA recommended)
 
 ## Installation
 
-1. Clone this repository:  
-   ```bash
-   git clone https://github.com/androceo123/selenium_course.git
-   cd selenium_course
+1. Clone this repository:
 
-## running-the-tests
+```bash
+git clone https://github.com/androceo123/selenium_course.git
+cd selenium_course
+```
 
-1- Simply run:
-  mvn clean test
-This will compile the project, launch ChromeDriver, execute all TestNG tests, and generate test reports under target/
+## Running the Tests
 
-## what-i-learned
+1. Simply run:
+
+```bash
+mvn clean test
+```
+
+This will compile the project, launch ChromeDriver, execute all TestNG tests, and generate test reports under `target/`
+
+## What I Learned
 
 Throughout this course I gained hands‑on experience with:
 
-Setup & Configuration
+### Setup & Configuration
 
-Installing Java, Maven and Selenium dependencies
+- Installing Java, Maven and Selenium dependencies
+- Configuring webdriver.chrome.driver
 
-Configuring webdriver.chrome.driver
+### WebDriver Basics
 
-WebDriver Basics
+- Instantiating WebDriver (ChromeDriver)
+- Managing browser lifecycle (get(), quit())
 
-Instantiating WebDriver (ChromeDriver)
+### Finding & Interacting with Elements
 
-Managing browser lifecycle (get(), quit())
+- Locators: ID, name, class, CSS selectors, XPath
+- Actions: click, sendKeys, clear
+- Dropdowns (Select), keyboard actions and special keys
 
-Finding & Interacting with Elements
+### Advanced Interactions
 
-Locators: ID, name, class, CSS selectors, XPath
+- Drag-and-drop, hover, right‑click
+- Handling JavaScript alerts, file uploads, modals
 
-Actions: click, sendKeys, clear
+### Frames & Windows
 
-Dropdowns (Select), keyboard actions and special keys
+- Switching into iframe elements
+- Navigating multiple windows/tabs and switching focus
 
-Advanced Interactions
+### Synchronization
 
-Drag-and-drop, hover, right‑click
+- Implicit, explicit and fluent waits
+- Avoiding flaky tests
 
-Handling JavaScript alerts, file uploads, modals
+### JavaScript Execution
 
-Frames & Windows
+- Executing custom JS when needed
 
-Switching into iframe elements
+### Test Structuring with TestNG
 
-Navigating multiple windows/tabs and switching focus
+- Annotations (@BeforeMethod, @Test, @AfterMethod)
+- Assertions and grouping
 
-Synchronization
+### Page Object Model
 
-Implicit, explicit and fluent waits
+- Encapsulating page elements and behaviors
+- Improving maintainability
 
-Avoiding flaky tests
+### Utilities & Extras
 
-JavaScript Execution
-
-Executing custom JS when needed
-
-Test Structuring with TestNG
-
-Annotations (@BeforeMethod, @Test, @AfterMethod)
-
-Assertions and grouping
-
-Page Object Model
-
-Encapsulating page elements and behaviors
-
-Improving maintainability
-
-Utilities & Extras
-
-Capturing screenshots
-
-Listening for WebDriver events for enhanced logging
-
-Running tests headlessly
-
-Cookie management
-
+- Capturing screenshots
+- Listening for WebDriver events for enhanced logging
+- Running tests headlessly
+- Cookie management
