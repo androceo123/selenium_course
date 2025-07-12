@@ -1,6 +1,6 @@
 # Selenium WebDriver with Java – Course Automation Tests
 
-This repository contains automated UI tests built while following the [Selenium WebDriver Tutorial (Java)](https://testautomationu.applitools.com/selenium-webdriver-tutorial-java/) course on Test Automation University. All tests can be run with a single Maven command.
+This repository contains automated UI tests built while following the [Selenium WebDriver Tutorial (Java)](https://testautomationu.applitools.com/selenium-webdriver-tutorial-java/) course on Test Automation University. All tests can be run with a single Maven command. test
 
 ## Table of Contents
 
