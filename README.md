@@ -1,4 +1,7 @@
 [![build_by_api](https://github.com/androceo123/selenium_course/actions/workflows/Update%20API-build.yml/badge.svg)](https://github.com/androceo123/selenium_course/actions/workflows/Update%20API-build.yml)
+[![PR check naming convention](https://github.com/androceo123/selenium_course/actions/workflows/PR-linter.yml/badge.svg)](https://github.com/androceo123/selenium_course/actions/workflows/PR-linter.yml)
+[![run unit tests of feature branches](https://github.com/androceo123/selenium_course/actions/workflows/run-unit-tests.yml/badge.svg)](https://github.com/androceo123/selenium_course/actions/workflows/run-unit-tests.yml)
+[![Manual workflow](https://github.com/androceo123/selenium_course/actions/workflows/manual.yml/badge.svg)](https://github.com/androceo123/selenium_course/actions/workflows/manual.yml)
 # Selenium WebDriver with Java – Course Automation Tests
 
 This repository contains automated UI tests built while following the [Selenium WebDriver Tutorial (Java)](https://testautomationu.applitools.com/selenium-webdriver-tutorial-java/) course on Test Automation University. All tests can be run with a single Maven command.
