@@ -1,0 +1,36 @@
+name: Nightly Selenium Tests
+
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    # 23:00 Asunción is 02:00 UTC
+    - cron: '0 2 * * *'
+
+jobs:
+  run_selenium_tests:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Verify Java version
+        run: java -version
+
+      - name: Run Selenium tests
+        run: mvn test
+
+      - name: Upload test reports
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: surefire-reports
+          path: target/surefire-reports/**/*.xml
+          retention-days: 7
