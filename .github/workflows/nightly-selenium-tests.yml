@@ -1,9 +1,6 @@
 name: Nightly Selenium Tests
 
 on:
-  push:
-    branches:
-      - main
   schedule:
     # 23:00 Asunción is 02:00 UTC
     - cron: '0 2 * * *'
