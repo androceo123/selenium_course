@@ -6,7 +6,7 @@ on:
 
 jobs:
   pr-lint:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: seferov/pr-lint-action@master
         with:
