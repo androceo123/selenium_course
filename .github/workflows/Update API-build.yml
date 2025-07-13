@@ -26,7 +26,7 @@ jobs:
     needs: run-tests
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/upload-artifact@v4
+      - uses: actions/checkout@v3
 
       - name: Build with Maven
         run: mvn -DskipTests -B package --no-transfer-progress --file ./pom.xml
@@ -35,7 +35,8 @@ jobs:
         run: mv target/*.jar "target/${{ github.event.client_payload.artifactName }}.jar"
 
       - name: Upload Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: ${{ github.event.client_payload.artifactName }}.jar
           path: target/*.jar
+
