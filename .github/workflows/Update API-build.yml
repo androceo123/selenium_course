@@ -26,16 +26,16 @@ jobs:
     needs: run-tests
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/upload-artifact@v4
 
       - name: Build with Maven
         run: mvn -DskipTests -B package --no-transfer-progress --file ./pom.xml
 
       - name: Rename Artifact
-        run: mv ./target/*digitalbank*.war "./target/${{ github.event.client_payload.artifactName }}.war"
+        run: mv target/*.jar "target/${{ github.event.client_payload.artifactName }}.jar"
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
         with:
-          name: ${{ github.event.client_payload.artifactName }}.war
-          path: ./target/*.war
+          name: ${{ github.event.client_payload.artifactName }}.jar
+          path: target/*.jar
