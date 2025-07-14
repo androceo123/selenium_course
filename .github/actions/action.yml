@@ -1,18 +1,24 @@
-name: 'PR Labeler (Java)'
-description: 'Labels pull requests based on changed file types'
+name: "Label PR by file types"
 inputs:
   owner:
-    description: 'Repository owner e.g. ${{ github.repository_owner }}'
     required: true
+    description: "Repo owner"
   repo:
-    description: 'Repository name e.g. ${{ github.event.repository.name }}'
     required: true
+    description: "Repo name"
   pr_number:
-    description: 'Pull request number'
     required: true
+    description: "PR number"
   token:
-    description: 'GitHub token (${{ secrets.GITHUB_TOKEN }})'
     required: true
+    description: "GitHub token"
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
+  using: composite
+  steps:
+    - uses: tau-github-actions-for-testing/tau-own-action-pull-request@main
+      with:
+        owner:   ${{ inputs.owner }}
+        repo:    ${{ inputs.repo }}
+        pr_number: ${{ inputs.pr_number }}
+        token:   ${{ inputs.token }}
+
