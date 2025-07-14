@@ -24,3 +24,14 @@ jobs:
           repo: ${{ github.event.repository.name }}
           pr_number: ${{ github.event.number }}
           token: ${{ secrets.PAT_TOKEN }}
+  label:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Label PR by file types
+    uses: ./.github/actions/pr-labeler-java
+    with:
+      owner:    ${{ github.repository_owner }}
+      repo:     ${{ github.event.repository.name }}
+      pr_number: ${{ github.event.number }}
+      token:    ${{ secrets.GITHUB_TOKEN }}
