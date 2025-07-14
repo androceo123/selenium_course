@@ -31,7 +31,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Label PR by file types
-        uses: ./.github/actions/pr-labeler-java
+        uses: ./.github/actions
         with:
           owner:     ${{ github.repository_owner }}
           repo:      ${{ github.event.repository.name }}
