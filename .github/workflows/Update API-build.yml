@@ -31,12 +31,22 @@ jobs:
       - name: Build with Maven
         run: mvn -DskipTests -B package --no-transfer-progress --file ./pom.xml
 
+      - name: List built files
+        run: ls -la target
+
+      - name: Pick main JAR
+        id: pick
+        shell: bash
+        run: |
+          set -euo pipefail
+          FILE=$(ls -1 target/*.jar | grep -vE 'sources|javadoc|original' | head -n 1)
+          echo "file=$FILE" >> "$GITHUB_OUTPUT"
+
       - name: Rename Artifact
-        run: mv target/*.jar "target/${{ github.event.client_payload.artifactName }}.jar"
+        run: cp "${{ steps.pick.outputs.file }}" "target/${{ github.event.client_payload.artifactName }}.jar"
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
           name: ${{ github.event.client_payload.artifactName }}.jar
-          path: target/*.jar
-
+          path: target/${{ github.event.client_payload.artifactName }}.jar
